@@ -40,6 +40,6 @@ models:
               values: ['North America', 'Europe', 'Oceania', 'Asia', 'South America']
             
   - name: customer_details
-    description: This model joins regions, nations, and customers tables into one view.
+    description: This model joins regions, nations, and customers tables into one view. 
               
               

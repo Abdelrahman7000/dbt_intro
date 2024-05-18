@@ -1,6 +1,6 @@
 select 
     CustomerID,
-    concat(CustomerName,' ',ContactName) CusomerName,
+    concat(CustomerName,' ',ContactName) CustomerName,
     Country,
     NationID,
     Email,

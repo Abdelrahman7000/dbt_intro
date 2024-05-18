@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: staging
+    database: citric-expanse-423211-t4
+    schema: dbt_db
+    tables:
+      - name: raw_customers
+      - name: raw_nations
+      - name: raw_orders
+      - name: raw_regions

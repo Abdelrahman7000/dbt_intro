@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: This model cleans the customer data, there is one record for each customer
+    columns:
+      - name: CustomerID
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_orders
+    description: This convert the data types of the order columns.
+    columns:
+      - name: OrderID
+        tests:
+          - unique
+          - not_null
+
+      - name: CustomerID
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: CustomerID
+  
+  - name: stg_nations
+    columns:
+      - name: NationID
+        tests:
+          - unique
+          - not_null
+    
+  - name: stg_regions
+    columns:
+      - name: RegionName
+        tests:
+          - accepted_values:
+              values: ['North America', 'Europe', 'Oceania', 'Asia', 'South America']
+            
+  - name: customer_details
+    description: This model joins regions, nations, and customers tables into one view. 
+              
+              

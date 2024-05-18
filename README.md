@@ -6,3 +6,5 @@ At the end, I build two aggregated tables from two dimensions, one for orders pe
 
 ![dag2](https://github.com/Abdelrahman7000/dbt_intro/assets/61333407/bbe2a4cf-311c-4c5e-b12a-3353e3626d2b)
 
+### Test
+I added a schema.yml file that contains some tests to check the uniquness for some columns like ID columns in the Customers table and to check if some columns have nulls.

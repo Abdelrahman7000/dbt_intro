@@ -1,3 +1,10 @@
+{{
+  config(
+    materialized='view'
+  )
+}}
+
+
 select 
     c.CustomerID,
     c.CustomerName,

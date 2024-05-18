@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: stg_customers
+    columns:
+      - name: CustomerID
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_orders
+    columns:
+      - name: OrderID
+        tests:
+          - unique
+          - not_null
+
+      - name: CustomerID
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: CustomerID
+  
+  - name: stg_nations
+    columns:
+      - name: NationID
+        tests:
+          - unique
+          - not_null
+    
+  - name: stg_regions
+    columns:
+      - name: RegionName
+        tests:
+          - accepted_values:
+              values: ['North America', 'Europe', 'Oceania', 'Asia', 'South America']
+              
+              

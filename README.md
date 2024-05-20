@@ -1,16 +1,12 @@
 # dbt_intro
-In this repo, I created my first project using dbt.
-I used dbt with Google BigQuery to transform some data that consists of 4 tables through diferent levels of transformations.
-At the end, I build two aggregated tables from two dimensions, one for orders per customer, and another the amount of orders per country.
-### Tables:
+In this repo, I created a simple project using dbt as part of the dbt fundamentals course.
+I used dbt with Google BigQuery to transform some data that consists of 4 tables through different levels of transformations.
+In the end, I build two aggregated tables from two dimensions, one for orders per customer, and another for the amount of orders per country.
+### Source Tables:
 Customers
 Orders
 Nations
 Regions
 
-![dag1](https://github.com/Abdelrahman7000/dbt_intro/assets/61333407/14f2403c-95ba-468d-8928-afd752f3aeb8)
+![Screenshot from 2024-05-20 15-39-54](https://github.com/Abdelrahman7000/dbt_intro/assets/61333407/a9280b04-c613-45ef-8411-b395236efdf4)
 
-![dag2](https://github.com/Abdelrahman7000/dbt_intro/assets/61333407/bbe2a4cf-311c-4c5e-b12a-3353e3626d2b)
-
-### Test
-I added a schema.yml file that contains some tests to check the uniquness for some columns like ID columns in the Customers table and to check if some columns have nulls.

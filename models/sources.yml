@@ -2,10 +2,21 @@ version: 2
 
 sources:
   - name: staging
+    description: a clone of a BigQuery datawarehouse
     database: citric-expanse-423211-t4
     schema: dbt_db
     tables:
       - name: raw_customers
+        description: raw customers data
+        columns:
+          - name: CustomerID
+            description: primary key for customers data
       - name: raw_nations
+        description: raw nations data
       - name: raw_orders
+        description: raw orders data
+        columns:
+          - name: OrderID
+            description: primary key for orders data
       - name: raw_regions
+        description: raw regions data
